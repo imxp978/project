@@ -1,0 +1,22 @@
+{% extends 'messageboard/layout.html' %}
+
+{% block title %}
+message board testing
+{% endblock %}
+
+{% block body %}
+<h1>Message Board Testing</h1>
+<hr>
+
+{% if message %}
+    
+    {% for i in message reversed %}
+        <h3>{{ i.title }}</h3>
+        <p>{{ i.content }}</p>
+        <p>by: {{ i.user }} <br>at: {{ i.time }}</p>
+        <hr>
+    {% endfor %}
+    
+{% endif %}
+
+{% endblock %}

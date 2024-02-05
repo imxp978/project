@@ -1,0 +1,26 @@
+{% extends 'messageboard/layout.html' %}
+
+{% block title %}
+Create Message Testing
+{% endblock %}
+
+{% block body %}
+    <form action="create" method="POST">
+    {% csrf_token %}
+        <p>
+            <label for="user">user:
+            <input name="user" id="user" type="text">
+        </p>
+        <p>
+            <label for="title">title: 
+            <input name="title" id="title" type="text">
+        </p>
+        <p>
+            <label for="content">content:
+            <textarea name="content" id="content"></textarea>
+        </p>
+        <input type="submit">
+        
+
+    </form> 
+{% endblock %}

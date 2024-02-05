@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <nav>
+            <a href="{% url 'index' %}">messages</a>
+            <a href="{% url 'create' %}">create message</a>
+            <a href="{% url 'register' %}">register</a>
+
+        </nav>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
